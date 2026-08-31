@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+
+<html lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Campañas Ambientales - EcoRuta</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-tint": "#1b4332",
+                        "inverse-surface": "#2f3130",
+                        "error": "#ba1a1a",
+                        "secondary-fixed": "#d6ccc2",
+                        "on-primary-fixed-variant": "#274e3d",
+                        "surface-dim": "#dadad9",
+                        "background": "#faf9f8",
+                        "on-surface-variant": "#414844",
+                        "surface-container": "#eeeeed",
+                        "surface-container-highest": "#e3e2e1",
+                        "on-secondary-container": "#6a635b",
+                        "on-tertiary-container": "#33342a",
+                        "on-secondary": "#ffffff",
+                        "outline": "#717973",
+                        "on-primary": "#ffffff",
+                        "on-error": "#ffffff",
+                        "tertiary-fixed-dim": "#b7b7a4",
+                        "inverse-on-surface": "#f1f0f0",
+                        "tertiary-fixed": "#e2e2ce",
+                        "primary-fixed-dim": "#a5d0b9",
+                        "primary": "#012d1d",
+                        "error-container": "#ffdad6",
+                        "on-secondary-fixed": "#201b15",
+                        "on-tertiary-fixed-variant": "#474839",
+                        "inverse-primary": "#a5d0b9",
+                        "surface-container-lowest": "#ffffff",
+                        "on-surface": "#1a1c1c",
+                        "on-primary-fixed": "#002114",
+                        "tertiary-container": "#b7b7a4",
+                        "surface-variant": "#e3e2e1",
+                        "on-primary-container": "#7ba490",
+                        "on-background": "#1a1c1c",
+                        "on-tertiary-fixed": "#1b1d10",
+                        "secondary-container": "#d6ccc2",
+                        "on-error-container": "#93000a",
+                        "secondary": "#645d55",
+                        "secondary-fixed-dim": "#c2b8ae",
+                        "tertiary": "#26271a",
+                        "outline-variant": "#c1c8c2",
+                        "surface": "#faf9f8",
+                        "surface-container-high": "#e9e8e7",
+                        "primary-fixed": "#c1ecd4",
+                        "on-tertiary": "#ffffff",
+                        "surface-bright": "#faf9f8",
+                        "on-secondary-fixed-variant": "#4c463e",
+                        "primary-container": "#1b4332",
+                        "surface-container-low": "#f4f3f2"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "container-max": "1200px",
+                        "unit": "8px",
+                        "section-gap": "120px",
+                        "margin-mobile": "20px",
+                        "gutter": "24px",
+                        "margin-desktop": "64px"
+                    },
+                    "fontFamily": {
+                        "body-md": ["Manrope"],
+                        "headline-lg": ["Manrope"],
+                        "display-lg": ["Manrope"],
+                        "headline-lg-mobile": ["Manrope"],
+                        "body-lg": ["Manrope"],
+                        "caption": ["Manrope"],
+                        "label-md": ["Manrope"],
+                        "headline-md": ["Manrope"]
+                    },
+                    "fontSize": {
+                        "body-md": ["16px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "headline-lg": ["32px", { "lineHeight": "1.3", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+                        "display-lg": ["48px", { "lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "800" }],
+                        "headline-lg-mobile": ["28px", { "lineHeight": "1.3", "fontWeight": "700" }],
+                        "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "caption": ["12px", { "lineHeight": "1.4", "fontWeight": "500" }],
+                        "label-md": ["14px", { "lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "600" }],
+                        "headline-md": ["24px", { "lineHeight": "1.4", "fontWeight": "600" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md text-body-md antialiased pt-[80px]">
+<!-- TopNavBar -->
+<nav class="bg-surface dark:bg-inverse-surface fixed top-0 w-full shadow-sm bg-surface dark:bg-inverse-surface shadow-[0px_4px_20px_rgba(27,67,50,0.04)] z-50">
+<div class="flex justify-between items-center px-margin-mobile md:px-margin-desktop py-4 max-w-container-max mx-auto">
+<a class="font-headline-md text-headline-md font-bold text-primary dark:text-primary-fixed-dim" href="#">EcoRuta</a>
+<div class="hidden md:flex items-center gap-gutter">
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-colors hover:bg-surface-container-low dark:hover:bg-surface-container-highest transition-all duration-200 px-4 py-2 rounded-full font-label-md text-label-md active:scale-95 transition-transform" href="#">Inicio</a>
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-colors hover:bg-surface-container-low dark:hover:bg-surface-container-highest transition-all duration-200 px-4 py-2 rounded-full font-label-md text-label-md active:scale-95 transition-transform" href="#">Puntos de reciclaje</a>
+<a class="text-primary dark:text-primary-fixed-dim border-b-2 border-primary dark:border-primary-fixed-dim pb-1 font-label-md text-label-md active:scale-95 transition-transform" href="#">Campañas</a>
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-colors hover:bg-surface-container-low dark:hover:bg-surface-container-highest transition-all duration-200 px-4 py-2 rounded-full font-label-md text-label-md active:scale-95 transition-transform" href="#">Registrar un punto</a>
+</div>
+<button class="bg-primary-container text-on-primary px-6 py-2 rounded-lg font-label-md text-label-md hover:opacity-90 transition-opacity hidden md:block">Unirse</button>
+<button class="md:hidden text-primary">
+<span class="material-symbols-outlined" data-icon="menu">menu</span>
+</button>
+</div>
+</nav>
+<!-- Main Content -->
+<main class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-section-gap">
+<!-- Header Section -->
+<header class="mb-16 text-center md:text-left">
+<h1 class="font-display-lg text-display-lg md:text-headline-lg-mobile text-primary mb-4">Campañas Ambientales</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">Únete a nuestras iniciativas comunitarias y sé parte del cambio. Descubre eventos de reforestación, limpieza y reciclaje en tu zona.</p>
+</header>
+<!-- Featured Campaign -->
+<section class="mb-section-gap">
+<div class="relative rounded-[24px] overflow-hidden shadow-[0px_4px_20px_rgba(27,67,50,0.04)] group cursor-pointer">
+<div class="w-full h-[400px] md:h-[500px] bg-cover bg-center transition-transform duration-700 group-hover:scale-105" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAfLuhv4WplqnEPKGQ98sdM2A_qKTXHtObjH6o255IGasrgrwcPBIzqYH5urtlJ1CNrecGTvt1OxHPMdMJ3MSemI2a4atqMVUwNP15XKUrrs7cNRxI2a2ZzbzS6YvRIBvpSJPPzy_Ku_xPfUHs_QQ7oNTSuJf6VGl7lzzNhApDmXdSWRvuOX2rDK6TuNdnUyHzq207_r2Qlt62-ACtENrAM71GMqJupM879agrCf6mIfrVENwK5rH_SisclnSCTDN3FD1g')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/40 to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-8 md:p-12 w-full md:w-2/3">
+<span class="inline-block bg-primary-fixed text-on-primary-fixed px-3 py-1 rounded-full font-caption text-caption mb-4">Destacado</span>
+<h2 class="font-headline-lg text-headline-lg text-on-primary mb-2">Gran Reforestación del Valle</h2>
+<p class="font-body-md text-body-md text-on-primary/90 mb-6 line-clamp-2">Acompáñanos en esta jornada masiva para plantar 10,000 árboles nativos y restaurar el ecosistema local. Se proveerán herramientas y refrigerios.</p>
+<div class="flex flex-wrap gap-4 items-center mb-6 text-on-primary/80 font-label-md text-label-md">
+<div class="flex items-center gap-2"><span class="material-symbols-outlined text-[18px]">calendar_today</span> 15 Octubre, 2024</div>
+<div class="flex items-center gap-2"><span class="material-symbols-outlined text-[18px]">location_on</span> Parque Nacional</div>
+</div>
+<button class="bg-primary-container text-on-primary px-8 py-3 rounded-lg font-label-md text-label-md hover:bg-primary transition-colors inline-flex items-center gap-2">
+                        Inscribirse <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Campaign Grid -->
+<section>
+<div class="flex justify-between items-end mb-8">
+<h3 class="font-headline-md text-headline-md text-primary">Próximos Eventos</h3>
+<button class="text-primary font-label-md text-label-md hover:underline flex items-center gap-1">Ver todos <span class="material-symbols-outlined text-[18px]">arrow_forward</span></button>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter">
+<!-- Card 1 -->
+<article class="bg-surface rounded-[16px] shadow-[0px_4px_20px_rgba(27,67,50,0.04)] overflow-hidden flex flex-col hover:-translate-y-1 transition-transform duration-300">
+<div class="h-48 bg-cover bg-center w-full" data-alt="A bright, sunlit community beach cleanup event. Volunteers in casual clothing are picking up plastic waste along a pristine coastline. The lighting is natural and vibrant, highlighting the contrast between the clean sand and the colorful trash bags. The mood is optimistic and active, fitting a modern eco-conscious campaign." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBfI9FaIh7oHtnGj4abgcDCFfAJKZxFwQ618FTF7KB11a-i7Oe3zrpzxn48itoF0-FZutfhy1TF-2mU2pfnpB_Y2HF1X8hE6Ec70f-EW7MWLsH4WxClUXJh9NRkW26MezSxdKWaWMfpNJrRSaw5MAp2J-IjiuSzfRoAN-I512l4kEMpP8Z83kAVUfT-lwU1ChUsHaaMD33CGunNMAhcMZtHSxcx9Dzl4WnZDNiCpy8OP5mbRlQyY8LHiQ')"></div>
+<div class="p-6 flex-1 flex flex-col">
+<div class="flex gap-2 mb-3">
+<span class="bg-secondary-container text-on-secondary-container px-2 py-1 rounded-full font-caption text-caption">Limpieza</span>
+</div>
+<h4 class="font-headline-md text-headline-md text-on-surface mb-2">Limpieza de Costas</h4>
+<p class="font-body-md text-body-md text-on-surface-variant mb-4 flex-1">Ayuda a mantener nuestras playas libres de plásticos. Una mañana dedicada a preservar la vida marina.</p>
+<div class="space-y-2 mb-6">
+<div class="flex items-center gap-2 text-on-surface-variant font-caption text-caption"><span class="material-symbols-outlined text-[16px]">calendar_today</span> 22 Octubre, 08:00 AM</div>
+<div class="flex items-center gap-2 text-on-surface-variant font-caption text-caption"><span class="material-symbols-outlined text-[16px]">location_on</span> Playa Sur</div>
+</div>
+<button class="w-full bg-surface-container-highest text-primary font-label-md text-label-md py-2.5 rounded-lg hover:bg-secondary-container transition-colors">Ver más</button>
+</div>
+</article>
+<!-- Card 2 -->
+<article class="bg-surface rounded-[16px] shadow-[0px_4px_20px_rgba(27,67,50,0.04)] overflow-hidden flex flex-col hover:-translate-y-1 transition-transform duration-300 border-t-2 border-primary">
+<div class="h-48 bg-cover bg-center w-full" data-alt="A close-up view of hands holding a small, vibrant green sapling ready to be planted in dark, rich soil. The background is a soft-focus forest setting with dappled sunlight filtering through the canopy. The color palette is earthy and organic, emphasizing greens and browns, conveying a sense of growth and environmental stewardship." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDX9FDfx34IVOsd8s6E7hUuIQfxEEH3PoWYZSV69ACvtW97HRl9D_yJd9yZckEzNw6ip1u1WpfNGdMqJtoBDgLgCCxh5dyaHfM_zuxVxuW76-Bkr4Hq7zCO1pamazdztI-ySOm0u8l3cYy9AzXngImCqLw4tYaa_v0e2VmlnMn6b07_c04U6x-35Qek-ytvc_QFBDSTs0AysFzBljYJ9zypzXk6rIwHBX9uZOgdKPvi4a0vbq-a2TuBuA')"></div>
+<div class="p-6 flex-1 flex flex-col">
+<div class="flex gap-2 mb-3">
+<span class="bg-primary-fixed text-on-primary-fixed px-2 py-1 rounded-full font-caption text-caption">Reforestación</span>
+</div>
+<h4 class="font-headline-md text-headline-md text-on-surface mb-2">Plantatón Urbana</h4>
+<p class="font-body-md text-body-md text-on-surface-variant mb-4 flex-1">Transformemos la ciudad plantando árboles en parques locales. Trae a tu familia.</p>
+<div class="space-y-2 mb-6">
+<div class="flex items-center gap-2 text-on-surface-variant font-caption text-caption"><span class="material-symbols-outlined text-[16px]">calendar_today</span> 05 Noviembre, 09:30 AM</div>
+<div class="flex items-center gap-2 text-on-surface-variant font-caption text-caption"><span class="material-symbols-outlined text-[16px]">location_on</span> Parque Central</div>
+</div>
+<button class="w-full bg-primary-container text-on-primary font-label-md text-label-md py-2.5 rounded-lg hover:opacity-90 transition-opacity">Inscribirse</button>
+</div>
+</article>
+<!-- Card 3 -->
+<article class="bg-surface rounded-[16px] shadow-[0px_4px_20px_rgba(27,67,50,0.04)] overflow-hidden flex flex-col hover:-translate-y-1 transition-transform duration-300">
+<div class="h-48 bg-cover bg-center w-full" data-alt="An indoor community center setup for a recycling workshop. Tables are organized with various categorized bins (plastic, paper, glass). People are engaging in sorting activities under bright, clean, modern indoor lighting. The atmosphere is educational and collaborative, with a clear focus on sustainability." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDCMXYemWw5VJwotiADFDdC4PTJqNDrjbfot9z_fa-Ztxol_GSkoJnTA9q3H5di8KtKRaZJ1KVEOnjGM8b2oydWNOAtpnH8Pe0dmDCwPel5skF4LpfzUwS9tn3EsPSNYXDnIKhNz0g9TsGarFxNHlZpGHY95OkyPmrN-6_Gjoq1chaDji7TNCXDn5XJlaZXgx4z-Sk1PFQdVqFb319DORQeZ-a-rvVPEN4ACI7R1iWtotehMiErTMKr2w')"></div>
+<div class="p-6 flex-1 flex flex-col">
+<div class="flex gap-2 mb-3">
+<span class="bg-secondary-container text-on-secondary-container px-2 py-1 rounded-full font-caption text-caption">Educación</span>
+<span class="bg-surface-container-high text-on-surface-variant px-2 py-1 rounded-full font-caption text-caption">Taller</span>
+</div>
+<h4 class="font-headline-md text-headline-md text-on-surface mb-2">Taller de Reciclaje Creativo</h4>
+<p class="font-body-md text-body-md text-on-surface-variant mb-4 flex-1">Aprende a transformar residuos en objetos útiles. Materiales incluidos.</p>
+<div class="space-y-2 mb-6">
+<div class="flex items-center gap-2 text-on-surface-variant font-caption text-caption"><span class="material-symbols-outlined text-[16px]">calendar_today</span> 12 Noviembre, 15:00 PM</div>
+<div class="flex items-center gap-2 text-on-surface-variant font-caption text-caption"><span class="material-symbols-outlined text-[16px]">location_on</span> Centro Comunitario</div>
+</div>
+<button class="w-full bg-surface-container-highest text-primary font-label-md text-label-md py-2.5 rounded-lg hover:bg-secondary-container transition-colors">Ver más</button>
+</div>
+</article>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-highest dark:bg-inverse-surface w-full py-section-gap bg-surface-container-highest dark:bg-inverse-surface border-t border-secondary-container">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter px-margin-desktop max-w-container-max mx-auto font-caption text-caption">
+<div>
+<a class="font-headline-md text-headline-md font-bold text-primary dark:text-primary-fixed-dim block mb-4" href="#">EcoRuta</a>
+<p class="text-on-secondary-container dark:text-on-secondary-fixed-dim">© 2024 EcoRuta. Todos los derechos reservados. Compromiso con el reciclaje comunitario.</p>
+</div>
+<div class="flex flex-col gap-2">
+<a class="text-on-secondary-container dark:text-on-secondary-fixed-dim hover:text-primary dark:hover:text-primary-fixed-dim underline transition-all opacity-80 hover:opacity-100 transition-opacity" href="#">Privacidad</a>
+<a class="text-on-secondary-container dark:text-on-secondary-fixed-dim hover:text-primary dark:hover:text-primary-fixed-dim underline transition-all opacity-80 hover:opacity-100 transition-opacity" href="#">Términos de Servicio</a>
+</div>
+<div class="flex flex-col gap-2">
+<a class="text-on-secondary-container dark:text-on-secondary-fixed-dim hover:text-primary dark:hover:text-primary-fixed-dim underline transition-all opacity-80 hover:opacity-100 transition-opacity" href="#">Contacto</a>
+<a class="text-on-secondary-container dark:text-on-secondary-fixed-dim hover:text-primary dark:hover:text-primary-fixed-dim underline transition-all opacity-80 hover:opacity-100 transition-opacity" href="#">Mapa del Sitio</a>
+</div>
+</div>
+</footer>
+</body></html>

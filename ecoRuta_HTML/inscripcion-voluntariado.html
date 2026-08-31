@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+
+<html class="light" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Inscripción a Voluntariado - EcoRuta</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "tertiary-fixed-dim": "#b7b7a4",
+                        "on-tertiary": "#ffffff",
+                        "on-secondary-fixed": "#201b15",
+                        "on-primary": "#ffffff",
+                        "surface-tint": "#1b4332",
+                        "on-tertiary-fixed": "#1b1d10",
+                        "error": "#ba1a1a",
+                        "on-primary-fixed-variant": "#274e3d",
+                        "on-surface-variant": "#414844",
+                        "surface-dim": "#dadad9",
+                        "secondary": "#645d55",
+                        "secondary-fixed-dim": "#c2b8ae",
+                        "surface-container-lowest": "#ffffff",
+                        "tertiary-container": "#b7b7a4",
+                        "on-secondary-container": "#6a635b",
+                        "surface-variant": "#e3e2e1",
+                        "surface-container-low": "#f4f3f2",
+                        "on-tertiary-container": "#33342a",
+                        "inverse-surface": "#2f3130",
+                        "inverse-primary": "#a5d0b9",
+                        "primary": "#012d1d",
+                        "on-surface": "#1a1c1c",
+                        "primary-container": "#1b4332",
+                        "on-primary-container": "#7ba490",
+                        "tertiary": "#26271a",
+                        "on-error-container": "#93000a",
+                        "primary-fixed": "#c1ecd4",
+                        "secondary-container": "#d6ccc2",
+                        "primary-fixed-dim": "#a5d0b9",
+                        "background": "#faf9f8",
+                        "outline": "#717973",
+                        "surface-bright": "#faf9f8",
+                        "tertiary-fixed": "#e2e2ce",
+                        "outline-variant": "#c1c8c2",
+                        "on-error": "#ffffff",
+                        "error-container": "#ffdad6",
+                        "secondary-fixed": "#d6ccc2",
+                        "inverse-on-surface": "#f1f0f0",
+                        "surface": "#faf9f8",
+                        "on-secondary-fixed-variant": "#4c463e",
+                        "surface-container-highest": "#e3e2e1",
+                        "on-secondary": "#ffffff",
+                        "on-tertiary-fixed-variant": "#474839",
+                        "surface-container": "#eeeeed",
+                        "on-primary-fixed": "#002114",
+                        "on-background": "#1a1c1c",
+                        "surface-container-high": "#e9e8e7"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "unit": "8px",
+                        "gutter": "24px",
+                        "margin-desktop": "64px",
+                        "margin-mobile": "20px",
+                        "section-gap": "120px",
+                        "container-max": "1200px"
+                    },
+                    "fontFamily": {
+                        "headline-lg": ["Manrope"],
+                        "label-md": ["Manrope"],
+                        "headline-lg-mobile": ["Manrope"],
+                        "body-lg": ["Manrope"],
+                        "display-lg": ["Manrope"],
+                        "body-md": ["Manrope"],
+                        "caption": ["Manrope"],
+                        "headline-md": ["Manrope"]
+                    },
+                    "fontSize": {
+                        "headline-lg": ["32px", { "lineHeight": "1.3", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+                        "label-md": ["14px", { "lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "600" }],
+                        "headline-lg-mobile": ["28px", { "lineHeight": "1.3", "fontWeight": "700" }],
+                        "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "display-lg": ["48px", { "lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "800" }],
+                        "body-md": ["16px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "caption": ["12px", { "lineHeight": "1.4", "fontWeight": "500" }],
+                        "headline-md": ["24px", { "lineHeight": "1.4", "fontWeight": "600" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background antialiased selection:bg-primary-container selection:text-on-primary min-h-screen flex flex-col font-sans">
+<!-- TopNavBar -->
+<nav class="bg-surface dark:bg-surface-container-low docked full-width top-0 shadow-sm z-50">
+<div class="flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop py-4 max-w-container-max mx-auto">
+<div class="font-headline-md text-headline-md font-bold text-primary dark:text-primary-fixed-dim">
+                EcoRuta
+            </div>
+<div class="hidden md:flex gap-gutter items-center">
+<a class="text-on-surface-variant dark:text-surface-variant font-medium hover:text-primary dark:hover:text-primary-fixed-dim transition-colors duration-200" href="#">Inicio</a>
+<a class="text-on-surface-variant dark:text-surface-variant font-medium hover:text-primary dark:hover:text-primary-fixed-dim transition-colors duration-200" href="#">Puntos de reciclaje</a>
+<a class="text-primary dark:text-primary-fixed-dim border-b-2 border-primary font-semibold pb-1 hover:text-primary dark:hover:text-primary-fixed-dim transition-colors duration-200 opacity-80 transition-all duration-200" href="#">Campañas</a>
+<a class="text-on-surface-variant dark:text-surface-variant font-medium hover:text-primary dark:hover:text-primary-fixed-dim transition-colors duration-200" href="#">Registrar un punto</a>
+</div>
+<button class="bg-primary-container text-on-primary font-label-md text-label-md px-6 py-2 rounded-lg hover:bg-primary transition-colors">
+                Unirse
+            </button>
+</div>
+</nav>
+<!-- Main Content Canvas -->
+<main class="flex-grow w-full max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-12 md:py-24">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter items-start">
+<!-- Event Summary (Left Column) -->
+<div class="md:col-span-5 flex flex-col gap-8 md:sticky md:top-32">
+<div>
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile md:font-headline-lg md:text-headline-lg text-primary mb-4">
+                        Inscripción de Voluntariado
+                    </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant">
+                        Únete a nuestra comunidad y haz una diferencia real en el medio ambiente. Completa el formulario para asegurar tu lugar.
+                    </p>
+</div>
+<div class="bg-surface-container-lowest rounded-xl p-6 shadow-[0px_4px_20px_rgba(27,67,50,0.04)] border-t-2 border-primary">
+<h2 class="font-headline-md text-headline-md text-primary mb-6">Detalles del Evento</h2>
+<div class="flex flex-col gap-6">
+<!-- Image Container -->
+<div class="w-full h-48 rounded-lg overflow-hidden relative">
+<img class="absolute inset-0 w-full h-full object-cover" data-alt="A serene, wide-angle shot of a beautiful, pristine beach being cleaned by a small group of volunteers. The lighting is bright and sunny, highlighting the clear blue water and white sand. The mood is hopeful and community-driven, aligning perfectly with an eco-conscious, modern environmental campaign. The overall aesthetic is clean, professional, and vibrant." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDiFF2wjv0Xt2IBhfKJx-phzl18cDw6lU5X9HPdXDSDOf-Nq_d9AVyvnaFZo0uBZRfU6Xy9HR3X8dcwhbfPgT5zK5DXZSA24tqr_m8QDJZTkYE4yCFJ1J1S2Ow3CXdaUo6DYbBXbkgUa3e5Gl9_CnedrxU0u0EhMyiLcNZIR5As-DovS0wWUF2C986zmNXdEHT38UIFM1KWfQuFL6QELoiYtvqA8sKoyzNH7wGZB_9IaDai7HY9zx09OA"/>
+</div>
+<div class="flex items-start gap-4">
+<div class="w-10 h-10 rounded-full bg-secondary-container flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-primary">campaign</span>
+</div>
+<div>
+<h3 class="font-label-md text-label-md text-on-surface mb-1">Nombre del Evento</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Limpieza Costera - Playa del Sol</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<div class="w-10 h-10 rounded-full bg-secondary-container flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-primary">calendar_today</span>
+</div>
+<div>
+<h3 class="font-label-md text-label-md text-on-surface mb-1">Fecha y Hora</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Sábado, 15 de Noviembre, 2024<br/>08:00 AM - 12:00 PM</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<div class="w-10 h-10 rounded-full bg-secondary-container flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-primary">location_on</span>
+</div>
+<div>
+<h3 class="font-label-md text-label-md text-on-surface mb-1">Lugar</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Acceso Principal, Playa del Sol<br/>Sector Norte</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Registration Form (Right Column) -->
+<div class="md:col-span-7 bg-surface-container-lowest rounded-xl p-6 md:p-10 shadow-[0px_4px_20px_rgba(27,67,50,0.04)] mt-8 md:mt-0">
+<form class="flex flex-col gap-6" onsubmit="event.preventDefault(); alert('Formulario enviado correctamente');">
+<h3 class="font-headline-md text-headline-md text-primary mb-2">Tus Datos</h3>
+<div class="flex flex-col gap-2">
+<label class="font-label-md text-label-md text-on-surface" for="fullName">Nombre Completo</label>
+<input class="bg-surface-bright border border-outline-variant rounded-lg px-4 py-3 font-body-md text-body-md text-on-surface focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors" id="fullName" name="fullName" placeholder="Ej. María Pérez" required="" type="text"/>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+<div class="flex flex-col gap-2">
+<label class="font-label-md text-label-md text-on-surface" for="email">Correo Electrónico</label>
+<input class="bg-surface-bright border border-outline-variant rounded-lg px-4 py-3 font-body-md text-body-md text-on-surface focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors" id="email" name="email" placeholder="tu@correo.com" required="" type="email"/>
+</div>
+<div class="flex flex-col gap-2">
+<label class="font-label-md text-label-md text-on-surface" for="phone">Teléfono de Contacto</label>
+<input class="bg-surface-bright border border-outline-variant rounded-lg px-4 py-3 font-body-md text-body-md text-on-surface focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors" id="phone" name="phone" placeholder="+1 234 567 8900" required="" type="tel"/>
+</div>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+<div class="flex flex-col gap-2">
+<label class="font-label-md text-label-md text-on-surface" for="age">Edad <span class="font-caption text-caption text-on-surface-variant font-normal">(Para propósitos de seguro)</span></label>
+<input class="bg-surface-bright border border-outline-variant rounded-lg px-4 py-3 font-body-md text-body-md text-on-surface focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors" id="age" max="99" min="16" name="age" placeholder="Ej. 28" required="" type="number"/>
+</div>
+</div>
+<div class="flex flex-col gap-2 mt-4">
+<label class="font-label-md text-label-md text-on-surface" for="medical">Restricciones Médicas o Alergias</label>
+<textarea class="bg-surface-bright border border-outline-variant rounded-lg px-4 py-3 font-body-md text-body-md text-on-surface focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors resize-none" id="medical" name="medical" placeholder="Indica si tienes alguna condición médica relevante o alergias (opcional)..." rows="3"></textarea>
+</div>
+<div class="mt-6 pt-6 border-t border-surface-variant flex flex-col gap-6">
+<label class="flex items-start gap-3 cursor-pointer group">
+<div class="relative flex items-start pt-1">
+<input class="peer appearance-none w-5 h-5 border border-outline rounded bg-surface-bright checked:bg-primary checked:border-primary focus:ring-2 focus:ring-primary focus:ring-offset-2 transition-colors cursor-pointer" required="" type="checkbox"/>
+<span class="material-symbols-outlined text-on-primary absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none opacity-0 peer-checked:opacity-100 transition-opacity" style="font-size: 16px; font-weight: 700;">check</span>
+</div>
+<span class="font-body-md text-body-md text-on-surface-variant group-hover:text-on-surface transition-colors">
+                                He leído y acepto los <a class="text-primary underline hover:text-primary-container" href="#">términos y condiciones</a> del evento, así como el descargo de responsabilidad para voluntarios.
+                            </span>
+</label>
+<button class="w-full bg-primary-container hover:bg-primary text-on-primary font-label-md text-label-md py-4 rounded-lg transition-all duration-300 shadow-sm hover:shadow-md transform hover:-translate-y-[1px] flex justify-center items-center gap-2" type="submit">
+                            Confirmar Inscripción
+                            <span class="material-symbols-outlined" style="font-size: 20px;">arrow_forward</span>
+</button>
+</div>
+</form>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-secondary-container dark:bg-tertiary-container mt-auto">
+<div class="flex flex-col md:flex-row justify-between items-center w-full px-margin-mobile md:px-margin-desktop py-12 gap-gutter max-w-container-max mx-auto">
+<div class="font-headline-md text-headline-md font-bold text-primary dark:text-primary-fixed-dim">
+                EcoRuta
+            </div>
+<div class="flex flex-wrap justify-center gap-6 md:gap-8">
+<a class="text-on-secondary-container dark:text-on-tertiary-container font-body-md text-body-md hover:text-primary dark:hover:text-primary-fixed-dim transition-colors duration-200" href="#">Privacidad</a>
+<a class="text-on-secondary-container dark:text-on-tertiary-container font-body-md text-body-md hover:text-primary dark:hover:text-primary-fixed-dim transition-colors duration-200" href="#">Términos</a>
+<a class="text-on-secondary-container dark:text-on-tertiary-container font-body-md text-body-md hover:text-primary dark:hover:text-primary-fixed-dim transition-colors duration-200" href="#">Contacto</a>
+<a class="text-on-secondary-container dark:text-on-tertiary-container font-body-md text-body-md hover:text-primary dark:hover:text-primary-fixed-dim transition-colors duration-200" href="#">Comunidad</a>
+</div>
+<div class="font-caption text-caption text-on-secondary-container dark:text-on-tertiary-container text-center md:text-right mt-6 md:mt-0">
+                © 2024 EcoRuta. Todos los derechos reservados.
+            </div>
+</div>
+</footer>
+</body></html>

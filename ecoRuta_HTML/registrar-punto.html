@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+
+<html class="light" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Registrar un punto - EcoRuta</title>
+<!-- Fonts and Icons -->
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Config -->
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-tint": "#1b4332",
+                        "inverse-surface": "#2f3130",
+                        "error": "#ba1a1a",
+                        "secondary-fixed": "#d6ccc2",
+                        "on-primary-fixed-variant": "#274e3d",
+                        "surface-dim": "#dadad9",
+                        "background": "#faf9f8",
+                        "on-surface-variant": "#414844",
+                        "surface-container": "#eeeeed",
+                        "surface-container-highest": "#e3e2e1",
+                        "on-secondary-container": "#6a635b",
+                        "on-tertiary-container": "#33342a",
+                        "on-secondary": "#ffffff",
+                        "outline": "#717973",
+                        "on-primary": "#ffffff",
+                        "on-error": "#ffffff",
+                        "tertiary-fixed-dim": "#b7b7a4",
+                        "inverse-on-surface": "#f1f0f0",
+                        "tertiary-fixed": "#e2e2ce",
+                        "primary-fixed-dim": "#a5d0b9",
+                        "primary": "#012d1d",
+                        "error-container": "#ffdad6",
+                        "on-secondary-fixed": "#201b15",
+                        "on-tertiary-fixed-variant": "#474839",
+                        "inverse-primary": "#a5d0b9",
+                        "surface-container-lowest": "#ffffff",
+                        "on-surface": "#1a1c1c",
+                        "on-primary-fixed": "#002114",
+                        "tertiary-container": "#b7b7a4",
+                        "surface-variant": "#e3e2e1",
+                        "on-primary-container": "#7ba490",
+                        "on-background": "#1a1c1c",
+                        "on-tertiary-fixed": "#1b1d10",
+                        "secondary-container": "#d6ccc2",
+                        "on-error-container": "#93000a",
+                        "secondary": "#645d55",
+                        "secondary-fixed-dim": "#c2b8ae",
+                        "tertiary": "#26271a",
+                        "outline-variant": "#c1c8c2",
+                        "surface": "#faf9f8",
+                        "surface-container-high": "#e9e8e7",
+                        "primary-fixed": "#c1ecd4",
+                        "on-tertiary": "#ffffff",
+                        "surface-bright": "#faf9f8",
+                        "on-secondary-fixed-variant": "#4c463e",
+                        "primary-container": "#1b4332",
+                        "surface-container-low": "#f4f3f2"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "container-max": "1200px",
+                        "unit": "8px",
+                        "section-gap": "120px",
+                        "margin-mobile": "20px",
+                        "gutter": "24px",
+                        "margin-desktop": "64px"
+                    },
+                    "fontFamily": {
+                        "body-md": ["Manrope"],
+                        "headline-lg": ["Manrope"],
+                        "display-lg": ["Manrope"],
+                        "headline-lg-mobile": ["Manrope"],
+                        "body-lg": ["Manrope"],
+                        "caption": ["Manrope"],
+                        "label-md": ["Manrope"],
+                        "headline-md": ["Manrope"]
+                    },
+                    "fontSize": {
+                        "body-md": ["16px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "headline-lg": ["32px", { "lineHeight": "1.3", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+                        "display-lg": ["48px", { "lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "800" }],
+                        "headline-lg-mobile": ["28px", { "lineHeight": "1.3", "fontWeight": "700" }],
+                        "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "caption": ["12px", { "lineHeight": "1.4", "fontWeight": "500" }],
+                        "label-md": ["14px", { "lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "600" }],
+                        "headline-md": ["24px", { "lineHeight": "1.4", "fontWeight": "600" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body { font-family: 'Manrope', sans-serif; }
+    </style>
+</head>
+<body class="bg-background text-on-background min-h-screen flex flex-col">
+<!-- TopNavBar -->
+<header class="fixed top-0 w-full z-50 shadow-sm bg-surface dark:bg-inverse-surface">
+<div class="flex justify-between items-center px-margin-desktop py-4 max-w-container-max mx-auto md:px-margin-desktop px-margin-mobile">
+<!-- Brand -->
+<a class="font-headline-md text-headline-md font-bold text-primary dark:text-primary-fixed-dim" href="#">EcoRuta</a>
+<!-- Desktop Nav -->
+<nav class="hidden md:flex items-center gap-gutter">
+<a class="font-body-md text-body-md text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-colors hover:bg-surface-container-low dark:hover:bg-surface-container-highest px-3 py-2 rounded-lg" href="#">Inicio</a>
+<a class="font-body-md text-body-md text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-colors hover:bg-surface-container-low dark:hover:bg-surface-container-highest px-3 py-2 rounded-lg" href="#">Puntos de reciclaje</a>
+<a class="font-body-md text-body-md text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-colors hover:bg-surface-container-low dark:hover:bg-surface-container-highest px-3 py-2 rounded-lg" href="#">Campañas</a>
+<a class="font-body-md text-body-md text-primary dark:text-primary-fixed-dim border-b-2 border-primary dark:border-primary-fixed-dim pb-1 active:scale-95 transition-transform" href="#">Registrar un punto</a>
+</nav>
+<!-- Action -->
+<button class="hidden md:inline-flex bg-primary-container text-on-primary px-6 py-2 rounded-lg font-label-md text-label-md hover:bg-opacity-90 transition-all shadow-[0px_4px_20px_rgba(27,67,50,0.04)]">
+                Unirse
+            </button>
+<!-- Mobile Menu Toggle -->
+<button class="md:hidden text-primary">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</header>
+<!-- Main Content -->
+<main class="flex-grow pt-24 pb-section-gap px-margin-mobile md:px-margin-desktop relative">
+<!-- Hero Background Image (Fixed/Absolute for aesthetic) -->
+<div class="absolute inset-0 z-0 h-[60vh] w-full" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuD7uwz5krFybYI6leIqNt6kBg-VS4siErIDe7-FaLc4MYfuUuX26XP8i4xjyJ_zbdlWk0nEZBukfx1xHD3bl0CShWiUdZ6r1R1yYd3uYqCHjaSJmonzW5gTTAIDpThv-sYD1_gYizCMgBqkuo3xPPu_0rI34mIgX2x9KswIi0onVv6Ar1HJ_8vp9ClfelcrVtjeaPOn-dzoGWUlmGAwxnwmu4G5fD7L6Hm5WZQdvGvl0NtFP0OEjdyjD-qbZOYCpibJG4s'); background-size: cover; background-position: center;">
+<div class="absolute inset-0 bg-background/80 backdrop-blur-sm"></div>
+</div>
+<div class="relative z-10 max-w-3xl mx-auto mt-12">
+<div class="text-center mb-12">
+<h1 class="font-display-lg text-display-lg text-primary mb-4">Registrar un Punto</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant">Ayúdanos a expandir nuestra red. Sugiere un nuevo punto de reciclaje en tu comunidad.</p>
+</div>
+<!-- Registration Form Card -->
+<div class="bg-surface rounded-xl shadow-[0px_4px_20px_rgba(27,67,50,0.04)] p-8 md:p-12 border-t-2 border-primary">
+<form action="#" class="space-y-6" method="POST">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<!-- Nombre -->
+<div>
+<label class="block font-label-md text-label-md text-on-surface mb-2" for="nombre">Nombre del Punto</label>
+<input class="w-full bg-surface-bright border border-outline-variant rounded-lg px-4 py-3 font-body-md text-body-md focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors" id="nombre" name="nombre" placeholder="Ej. Centro de Acopio Central" type="text"/>
+</div>
+<!-- Categoría -->
+<div>
+<label class="block font-label-md text-label-md text-on-surface mb-2" for="categoria">Categoría Principal</label>
+<select class="w-full bg-surface-bright border border-outline-variant rounded-lg px-4 py-3 font-body-md text-body-md focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors appearance-none" id="categoria" name="categoria">
+<option disabled="" selected="" value="">Selecciona una categoría</option>
+<option value="plastico">Plástico y Envases</option>
+<option value="papel">Papel y Cartón</option>
+<option value="vidrio">Vidrio</option>
+<option value="organico">Residuos Orgánicos</option>
+<option value="electronicos">Electrónicos</option>
+</select>
+</div>
+</div>
+<!-- Dirección -->
+<div>
+<label class="block font-label-md text-label-md text-on-surface mb-2" for="direccion">Dirección Completa</label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline">location_on</span>
+<input class="w-full bg-surface-bright border border-outline-variant rounded-lg pl-10 pr-4 py-3 font-body-md text-body-md focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors" id="direccion" name="direccion" placeholder="Calle, número, comuna/ciudad" type="text"/>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<!-- Horario -->
+<div>
+<label class="block font-label-md text-label-md text-on-surface mb-2" for="horario">Horario de Atención</label>
+<input class="w-full bg-surface-bright border border-outline-variant rounded-lg px-4 py-3 font-body-md text-body-md focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors" id="horario" name="horario" placeholder="Ej. Lun-Vie 09:00 - 18:00" type="text"/>
+</div>
+<!-- Contacto -->
+<div>
+<label class="block font-label-md text-label-md text-on-surface mb-2" for="contacto">Teléfono / Email (Opcional)</label>
+<input class="w-full bg-surface-bright border border-outline-variant rounded-lg px-4 py-3 font-body-md text-body-md focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors" id="contacto" name="contacto" placeholder="Contacto del punto" type="text"/>
+</div>
+</div>
+<!-- Descripción -->
+<div>
+<label class="block font-label-md text-label-md text-on-surface mb-2" for="descripcion">Descripción o Detalles Adicionales</label>
+<textarea class="w-full bg-surface-bright border border-outline-variant rounded-lg px-4 py-3 font-body-md text-body-md focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors resize-none" id="descripcion" name="descripcion" placeholder="¿Qué tipo de materiales específicos aceptan? ¿Hay alguna restricción?" rows="4"></textarea>
+</div>
+<!-- Submit -->
+<div class="pt-4">
+<button class="w-full bg-primary-container text-on-primary py-4 rounded-lg font-label-md text-label-md hover:bg-opacity-90 transition-all shadow-[0px_4px_20px_rgba(27,67,50,0.04)] hover:-translate-y-0.5 flex justify-center items-center gap-2" type="submit">
+<span>Enviar registro</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">send</span>
+</button>
+<p class="text-center font-caption text-caption text-on-surface-variant mt-4">
+                            Tus sugerencias son revisadas por nuestro equipo antes de ser publicadas.
+                        </p>
+</div>
+</form>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="w-full py-section-gap bg-surface-container-highest dark:bg-inverse-surface border-t border-secondary-container">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter px-margin-desktop px-margin-mobile max-w-container-max mx-auto items-center">
+<div class="mb-6 md:mb-0">
+<span class="font-headline-md text-headline-md font-bold text-primary dark:text-primary-fixed-dim block mb-2 block">EcoRuta</span>
+<p class="font-caption text-caption text-on-secondary-container dark:text-on-secondary-fixed-dim">
+                    © 2024 EcoRuta. Todos los derechos reservados. Compromiso con el reciclaje comunitario.
+                </p>
+</div>
+<div class="md:col-span-2 flex flex-wrap gap-6 md:justify-end">
+<a class="font-caption text-caption text-on-secondary-container dark:text-on-secondary-fixed-dim hover:text-primary dark:hover:text-primary-fixed-dim transition-all hover:underline opacity-80 hover:opacity-100" href="#">Privacidad</a>
+<a class="font-caption text-caption text-on-secondary-container dark:text-on-secondary-fixed-dim hover:text-primary dark:hover:text-primary-fixed-dim transition-all hover:underline opacity-80 hover:opacity-100" href="#">Términos de Servicio</a>
+<a class="font-caption text-caption text-on-secondary-container dark:text-on-secondary-fixed-dim hover:text-primary dark:hover:text-primary-fixed-dim transition-all hover:underline opacity-80 hover:opacity-100" href="#">Contacto</a>
+<a class="font-caption text-caption text-on-secondary-container dark:text-on-secondary-fixed-dim hover:text-primary dark:hover:text-primary-fixed-dim transition-all hover:underline opacity-80 hover:opacity-100" href="#">Mapa del Sitio</a>
+</div>
+</div>
+</footer>
+</body></html>
