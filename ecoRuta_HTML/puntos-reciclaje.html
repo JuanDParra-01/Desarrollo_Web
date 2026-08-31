@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+
+<html class="light" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>EcoRuta - Puntos de Reciclaje</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-tint": "#1b4332",
+                        "inverse-surface": "#2f3130",
+                        "error": "#ba1a1a",
+                        "secondary-fixed": "#d6ccc2",
+                        "on-primary-fixed-variant": "#274e3d",
+                        "surface-dim": "#dadad9",
+                        "background": "#faf9f8",
+                        "on-surface-variant": "#414844",
+                        "surface-container": "#eeeeed",
+                        "surface-container-highest": "#e3e2e1",
+                        "on-secondary-container": "#6a635b",
+                        "on-tertiary-container": "#33342a",
+                        "on-secondary": "#ffffff",
+                        "outline": "#717973",
+                        "on-primary": "#ffffff",
+                        "on-error": "#ffffff",
+                        "tertiary-fixed-dim": "#b7b7a4",
+                        "inverse-on-surface": "#f1f0f0",
+                        "tertiary-fixed": "#e2e2ce",
+                        "primary-fixed-dim": "#a5d0b9",
+                        "primary": "#012d1d",
+                        "error-container": "#ffdad6",
+                        "on-secondary-fixed": "#201b15",
+                        "on-tertiary-fixed-variant": "#474839",
+                        "inverse-primary": "#a5d0b9",
+                        "surface-container-lowest": "#ffffff",
+                        "on-surface": "#1a1c1c",
+                        "on-primary-fixed": "#002114",
+                        "tertiary-container": "#b7b7a4",
+                        "surface-variant": "#e3e2e1",
+                        "on-primary-container": "#7ba490",
+                        "on-background": "#1a1c1c",
+                        "on-tertiary-fixed": "#1b1d10",
+                        "secondary-container": "#d6ccc2",
+                        "on-error-container": "#93000a",
+                        "secondary": "#645d55",
+                        "secondary-fixed-dim": "#c2b8ae",
+                        "tertiary": "#26271a",
+                        "outline-variant": "#c1c8c2",
+                        "surface": "#faf9f8",
+                        "surface-container-high": "#e9e8e7",
+                        "primary-fixed": "#c1ecd4",
+                        "on-tertiary": "#ffffff",
+                        "surface-bright": "#faf9f8",
+                        "on-secondary-fixed-variant": "#4c463e",
+                        "primary-container": "#1b4332",
+                        "surface-container-low": "#f4f3f2"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "container-max": "1200px",
+                        "unit": "8px",
+                        "section-gap": "120px",
+                        "margin-mobile": "20px",
+                        "gutter": "24px",
+                        "margin-desktop": "64px"
+                    },
+                    "fontFamily": {
+                        "body-md": ["Manrope"],
+                        "headline-lg": ["Manrope"],
+                        "display-lg": ["Manrope"],
+                        "headline-lg-mobile": ["Manrope"],
+                        "body-lg": ["Manrope"],
+                        "caption": ["Manrope"],
+                        "label-md": ["Manrope"],
+                        "headline-md": ["Manrope"]
+                    },
+                    "fontSize": {
+                        "body-md": ["16px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "headline-lg": ["32px", { "lineHeight": "1.3", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+                        "display-lg": ["48px", { "lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "800" }],
+                        "headline-lg-mobile": ["28px", { "lineHeight": "1.3", "fontWeight": "700" }],
+                        "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "caption": ["12px", { "lineHeight": "1.4", "fontWeight": "500" }],
+                        "label-md": ["14px", { "lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "600" }],
+                        "headline-md": ["24px", { "lineHeight": "1.4", "fontWeight": "600" }]
+                    }
+                },
+            },
+        }
+    </script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        body { font-family: 'Manrope', sans-serif; }
+    </style>
+</head>
+<body class="bg-background text-on-background min-h-screen flex flex-col">
+<!-- TopNavBar (Shared Component) -->
+<nav class="bg-surface dark:bg-inverse-surface shadow-[0px_4px_20px_rgba(27,67,50,0.04)] fixed top-0 w-full z-50">
+<div class="flex justify-between items-center px-margin-mobile md:px-margin-desktop py-4 max-w-container-max mx-auto">
+<div class="font-headline-md text-headline-md font-bold text-primary dark:text-primary-fixed-dim">
+                EcoRuta
+            </div>
+<div class="hidden md:flex space-x-8 items-center font-body-md text-body-md">
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-colors hover:bg-surface-container-low dark:hover:bg-surface-container-highest transition-all duration-200 px-3 py-2 rounded-lg" href="#">Inicio</a>
+<!-- Active Navigation Item based on context -->
+<a class="text-primary dark:text-primary-fixed-dim border-b-2 border-primary dark:border-primary-fixed-dim pb-1 px-3 py-2" href="#">Puntos de reciclaje</a>
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-colors hover:bg-surface-container-low dark:hover:bg-surface-container-highest transition-all duration-200 px-3 py-2 rounded-lg" href="#">Campañas</a>
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-colors hover:bg-surface-container-low dark:hover:bg-surface-container-highest transition-all duration-200 px-3 py-2 rounded-lg" href="#">Registrar un punto</a>
+</div>
+<button class="bg-primary-container text-on-primary font-label-md text-label-md px-6 py-2 rounded-lg hover:opacity-90 active:scale-95 transition-transform hidden md:block">
+                Unirse
+            </button>
+<!-- Mobile Menu Toggle -->
+<button class="md:hidden text-primary">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</nav>
+<!-- Main Content -->
+<main class="flex-grow pt-24 pb-section-gap px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto w-full">
+<!-- Header Image & Title -->
+<div class="mb-12 rounded-xl overflow-hidden relative shadow-[0px_4px_20px_rgba(27,67,50,0.04)]">
+<div class="w-full h-64 md:h-80 bg-cover bg-center" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCfQLMKxTcDjFam2hBI5uwzzWrVl7TRqQR6cv_cN9_PX89GZa-Wxd8-rMzjLnmUk7KGIWELErTHZJS1M5IH5PZl6OwtIz1jnOYzO9I8o-hKnI3aHb4X97yCP9xO3qH14DrDRWhgtdIFDujGOOW6j6wMLKBKulIorA0KAOZiG5n-e6bnrGyHgNfmBSYcvnRFF6y_Hzh2AKLW6yWqE1ol9J4nRzAjRlvFmJjZCZMExgedIR8pX_HV224k_YFsT6t3o6l3LhU')">
+<div class="absolute inset-0 bg-black/40 flex items-center justify-center">
+<h1 class="font-display-lg text-display-lg text-white text-center px-4">Puntos de Reciclaje</h1>
+</div>
+</div>
+</div>
+<!-- Filters -->
+<div class="flex flex-wrap gap-4 mb-10 justify-center md:justify-start">
+<button class="bg-primary-container text-on-primary font-label-md text-label-md px-4 py-2 rounded-full">Todo</button>
+<button class="bg-secondary-fixed text-primary font-label-md text-label-md px-4 py-2 rounded-full hover:bg-surface-container-highest transition-colors">Papel</button>
+<button class="bg-secondary-fixed text-primary font-label-md text-label-md px-4 py-2 rounded-full hover:bg-surface-container-highest transition-colors">Plástico</button>
+<button class="bg-secondary-fixed text-primary font-label-md text-label-md px-4 py-2 rounded-full hover:bg-surface-container-highest transition-colors">Vidrio</button>
+<button class="bg-secondary-fixed text-primary font-label-md text-label-md px-4 py-2 rounded-full hover:bg-surface-container-highest transition-colors">Metal</button>
+<button class="bg-secondary-fixed text-primary font-label-md text-label-md px-4 py-2 rounded-full hover:bg-surface-container-highest transition-colors">Electrónicos</button>
+</div>
+<!-- Bento Grid / Cards -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter">
+<!-- Card 1 -->
+<div class="bg-on-secondary rounded-[16px] p-6 shadow-[0px_4px_20px_rgba(27,67,50,0.04)] hover:shadow-lg hover:-translate-y-1 transition-all duration-300 border-t-2 border-primary">
+<h3 class="font-headline-md text-headline-md text-primary mb-2">Centro Comunitario Norte</h3>
+<div class="flex items-center text-on-surface-variant font-body-md text-body-md mb-2">
+<span class="material-symbols-outlined mr-2 text-sm">schedule</span>
+                    Lunes a Viernes: 08:00 - 18:00
+                </div>
+<div class="flex items-center text-on-surface-variant font-body-md text-body-md mb-4">
+<span class="material-symbols-outlined mr-2 text-sm">location_on</span>
+                    Av. Siempreviva 742
+                </div>
+<div class="flex flex-wrap gap-2 mb-6">
+<span class="bg-primary-fixed text-on-primary-fixed text-xs px-2 py-1 rounded-full">Papel</span>
+<span class="bg-primary-fixed text-on-primary-fixed text-xs px-2 py-1 rounded-full">Cartón</span>
+<span class="bg-primary-fixed text-on-primary-fixed text-xs px-2 py-1 rounded-full">Vidrio</span>
+</div>
+<a class="inline-flex items-center text-primary font-label-md text-label-md hover:underline" href="#">
+                    Ver detalle <span class="material-symbols-outlined ml-1 text-sm">arrow_forward</span>
+</a>
+</div>
+<!-- Card 2 -->
+<div class="bg-on-secondary rounded-[16px] p-6 shadow-[0px_4px_20px_rgba(27,67,50,0.04)] hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
+<h3 class="font-headline-md text-headline-md text-primary mb-2">Punto Limpio Plaza Central</h3>
+<div class="flex items-center text-on-surface-variant font-body-md text-body-md mb-2">
+<span class="material-symbols-outlined mr-2 text-sm">schedule</span>
+                    Todos los días: 24hrs
+                </div>
+<div class="flex items-center text-on-surface-variant font-body-md text-body-md mb-4">
+<span class="material-symbols-outlined mr-2 text-sm">location_on</span>
+                    Plaza de Armas
+                </div>
+<div class="flex flex-wrap gap-2 mb-6">
+<span class="bg-primary-fixed text-on-primary-fixed text-xs px-2 py-1 rounded-full">Plástico PET</span>
+<span class="bg-primary-fixed text-on-primary-fixed text-xs px-2 py-1 rounded-full">Latas</span>
+</div>
+<a class="inline-flex items-center text-primary font-label-md text-label-md hover:underline" href="#">
+                    Ver detalle <span class="material-symbols-outlined ml-1 text-sm">arrow_forward</span>
+</a>
+</div>
+<!-- Card 3 -->
+<div class="bg-on-secondary rounded-[16px] p-6 shadow-[0px_4px_20px_rgba(27,67,50,0.04)] hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
+<h3 class="font-headline-md text-headline-md text-primary mb-2">Ecoparque Sur</h3>
+<div class="flex items-center text-on-surface-variant font-body-md text-body-md mb-2">
+<span class="material-symbols-outlined mr-2 text-sm">schedule</span>
+                    Sábados y Domingos: 09:00 - 14:00
+                </div>
+<div class="flex items-center text-on-surface-variant font-body-md text-body-md mb-4">
+<span class="material-symbols-outlined mr-2 text-sm">location_on</span>
+                    Calle del Parque 123
+                </div>
+<div class="flex flex-wrap gap-2 mb-6">
+<span class="bg-primary-fixed text-on-primary-fixed text-xs px-2 py-1 rounded-full">Electrónicos</span>
+<span class="bg-primary-fixed text-on-primary-fixed text-xs px-2 py-1 rounded-full">Pilas</span>
+</div>
+<a class="inline-flex items-center text-primary font-label-md text-label-md hover:underline" href="#">
+                    Ver detalle <span class="material-symbols-outlined ml-1 text-sm">arrow_forward</span>
+</a>
+</div>
+<!-- Card 4 -->
+<div class="bg-on-secondary rounded-[16px] p-6 shadow-[0px_4px_20px_rgba(27,67,50,0.04)] hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
+<h3 class="font-headline-md text-headline-md text-primary mb-2">Estación Verde Universidad</h3>
+<div class="flex items-center text-on-surface-variant font-body-md text-body-md mb-2">
+<span class="material-symbols-outlined mr-2 text-sm">schedule</span>
+                    Lunes a Viernes: 08:00 - 20:00
+                </div>
+<div class="flex items-center text-on-surface-variant font-body-md text-body-md mb-4">
+<span class="material-symbols-outlined mr-2 text-sm">location_on</span>
+                    Campus Universitario, Edificio B
+                </div>
+<div class="flex flex-wrap gap-2 mb-6">
+<span class="bg-primary-fixed text-on-primary-fixed text-xs px-2 py-1 rounded-full">Papel</span>
+<span class="bg-primary-fixed text-on-primary-fixed text-xs px-2 py-1 rounded-full">Cartón</span>
+<span class="bg-primary-fixed text-on-primary-fixed text-xs px-2 py-1 rounded-full">Plástico</span>
+</div>
+<a class="inline-flex items-center text-primary font-label-md text-label-md hover:underline" href="#">
+                    Ver detalle <span class="material-symbols-outlined ml-1 text-sm">arrow_forward</span>
+</a>
+</div>
+</div>
+</main>
+<!-- Footer (Shared Component) -->
+<footer class="w-full py-section-gap bg-surface-container-highest dark:bg-inverse-surface border-t border-secondary-container mt-auto">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<!-- Brand -->
+<div class="mb-8 md:mb-0">
+<div class="font-headline-md text-headline-md font-bold text-primary dark:text-primary-fixed-dim mb-4">
+                    EcoRuta
+                </div>
+<p class="font-caption text-caption text-on-secondary-container dark:text-on-secondary-fixed-dim max-w-xs opacity-80 hover:opacity-100 transition-opacity">
+                    © 2024 EcoRuta. Todos los derechos reservados. Compromiso con el reciclaje comunitario.
+                </p>
+</div>
+<!-- Links -->
+<div class="md:col-span-2 flex justify-start md:justify-end">
+<div class="grid grid-cols-2 gap-8 font-caption text-caption">
+<a class="text-on-secondary-container dark:text-on-secondary-fixed-dim hover:text-primary dark:hover:text-primary-fixed-dim underline transition-all" href="#">Privacidad</a>
+<a class="text-on-secondary-container dark:text-on-secondary-fixed-dim hover:text-primary dark:hover:text-primary-fixed-dim underline transition-all" href="#">Términos de Servicio</a>
+<a class="text-on-secondary-container dark:text-on-secondary-fixed-dim hover:text-primary dark:hover:text-primary-fixed-dim underline transition-all" href="#">Contacto</a>
+<a class="text-on-secondary-container dark:text-on-secondary-fixed-dim hover:text-primary dark:hover:text-primary-fixed-dim underline transition-all" href="#">Mapa del Sitio</a>
+</div>
+</div>
+</div>
+</footer>
+</body></html>
