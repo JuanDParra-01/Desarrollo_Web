@@ -110,15 +110,18 @@
 <body class="antialiased min-h-screen flex flex-col pt-[72px]">
 <!-- TopNavBar -->
 <nav class="fixed top-0 w-full shadow-sm bg-surface dark:bg-inverse-surface z-50">
-<div class="flex justify-between items-center px-margin-desktop py-4 max-w-container-max mx-auto md:px-margin-desktop px-margin-mobile">
-<div class="font-headline-md text-headline-md font-bold text-primary dark:text-primary-fixed-dim">EcoRuta</div>
-<div class="hidden md:flex gap-8">
-<a class="text-primary dark:text-primary-fixed-dim border-b-2 border-primary dark:border-primary-fixed-dim pb-1 font-body-md text-body-md" href="#">Inicio</a>
-<a class="text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-colors font-body-md text-body-md hover:bg-surface-container-low dark:hover:bg-surface-container-highest transition-all duration-200 rounded px-2" href="#">Puntos de reciclaje</a>
-<a class="text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-colors font-body-md text-body-md hover:bg-surface-container-low dark:hover:bg-surface-container-highest transition-all duration-200 rounded px-2" href="#">Campañas</a>
-<a class="text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-colors font-body-md text-body-md hover:bg-surface-container-low dark:hover:bg-surface-container-highest transition-all duration-200 rounded px-2" href="#">Registrar un punto</a>
+<div class="flex justify-between items-center px-margin-mobile md:px-margin-desktop py-4 max-w-container-max mx-auto">
+<a class="font-headline-md text-headline-md font-bold text-primary dark:text-primary-fixed-dim" href="index.html">EcoRuta</a>
+<div class="hidden md:flex items-center gap-gutter">
+<a class="text-primary dark:text-primary-fixed-dim border-b-2 border-primary dark:border-primary-fixed-dim pb-1 px-3 py-2 font-label-md text-label-md" href="index.html">Inicio</a>
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-colors hover:bg-surface-container-low dark:hover:bg-surface-container-highest transition-all duration-200 px-3 py-2 rounded-lg font-label-md text-label-md" href="puntos-reciclaje.html">Puntos de reciclaje</a>
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-colors hover:bg-surface-container-low dark:hover:bg-surface-container-highest transition-all duration-200 px-3 py-2 rounded-lg font-label-md text-label-md" href="campanas__1_.html">Campañas</a>
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-colors hover:bg-surface-container-low dark:hover:bg-surface-container-highest transition-all duration-200 px-3 py-2 rounded-lg font-label-md text-label-md" href="registrar-punto.html">Registrar un punto</a>
 </div>
-<button class="bg-primary-container text-on-primary font-label-md text-label-md px-6 py-2 rounded-lg hover:bg-surface-tint active:scale-95 transition-transform">Unirse</button>
+<button class="hidden md:inline-flex bg-primary-container text-on-primary px-6 py-2 rounded-lg font-label-md text-label-md hover:bg-opacity-90 transition-all">Unirse</button>
+<button class="md:hidden text-primary">
+<span class="material-symbols-outlined">menu</span>
+</button>
 </div>
 </nav>
 <!-- Main Content -->
@@ -136,11 +139,13 @@
 <div class="bg-surface p-4 rounded-xl shadow-[0px_4px_20px_rgba(27,67,50,0.08)] flex flex-col md:flex-row gap-4 w-full max-w-3xl border border-surface-container-highest">
 <div class="flex-grow flex items-center bg-background rounded-lg border border-surface-dim focus-within:border-primary px-4 py-3">
 <span class="material-symbols-outlined text-on-surface-variant mr-3">search</span>
-<input class="w-full bg-transparent border-none focus:ring-0 text-on-surface font-body-md text-body-md placeholder:text-outline-variant" placeholder="¿Qué necesitas reciclar? Ej: Plástico, Vidrio, Pilas..." type="text"/>
+<label class="sr-only" for="busqueda-material">¿Qué necesitas reciclar?</label>
+<input class="w-full bg-transparent border-none focus:ring-0 text-on-surface font-body-md text-body-md placeholder:text-outline-variant" id="busqueda-material" name="busqueda-material" placeholder="¿Qué necesitas reciclar? Ej: Plástico, Vidrio, Pilas..." type="text"/>
 </div>
 <div class="flex-grow flex items-center bg-background rounded-lg border border-surface-dim focus-within:border-primary px-4 py-3">
 <span class="material-symbols-outlined text-on-surface-variant mr-3">location_on</span>
-<input class="w-full bg-transparent border-none focus:ring-0 text-on-surface font-body-md text-body-md placeholder:text-outline-variant" placeholder="Tu ubicación" type="text"/>
+<label class="sr-only" for="ubicacion">Tu ubicación</label>
+<input class="w-full bg-transparent border-none focus:ring-0 text-on-surface font-body-md text-body-md placeholder:text-outline-variant" id="ubicacion" name="ubicacion" placeholder="Tu ubicación" type="text"/>
 </div>
 <button class="bg-primary-container text-on-primary px-8 py-3 rounded-lg font-label-md text-label-md hover:bg-surface-tint transition-colors whitespace-nowrap">Buscar Punto</button>
 </div>

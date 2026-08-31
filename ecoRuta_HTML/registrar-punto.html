@@ -109,27 +109,21 @@
 </head>
 <body class="bg-background text-on-background min-h-screen flex flex-col">
 <!-- TopNavBar -->
-<header class="fixed top-0 w-full z-50 shadow-sm bg-surface dark:bg-inverse-surface">
-<div class="flex justify-between items-center px-margin-desktop py-4 max-w-container-max mx-auto md:px-margin-desktop px-margin-mobile">
-<!-- Brand -->
-<a class="font-headline-md text-headline-md font-bold text-primary dark:text-primary-fixed-dim" href="#">EcoRuta</a>
-<!-- Desktop Nav -->
-<nav class="hidden md:flex items-center gap-gutter">
-<a class="font-body-md text-body-md text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-colors hover:bg-surface-container-low dark:hover:bg-surface-container-highest px-3 py-2 rounded-lg" href="#">Inicio</a>
-<a class="font-body-md text-body-md text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-colors hover:bg-surface-container-low dark:hover:bg-surface-container-highest px-3 py-2 rounded-lg" href="#">Puntos de reciclaje</a>
-<a class="font-body-md text-body-md text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-colors hover:bg-surface-container-low dark:hover:bg-surface-container-highest px-3 py-2 rounded-lg" href="#">Campañas</a>
-<a class="font-body-md text-body-md text-primary dark:text-primary-fixed-dim border-b-2 border-primary dark:border-primary-fixed-dim pb-1 active:scale-95 transition-transform" href="#">Registrar un punto</a>
-</nav>
-<!-- Action -->
-<button class="hidden md:inline-flex bg-primary-container text-on-primary px-6 py-2 rounded-lg font-label-md text-label-md hover:bg-opacity-90 transition-all shadow-[0px_4px_20px_rgba(27,67,50,0.04)]">
-                Unirse
-            </button>
-<!-- Mobile Menu Toggle -->
+<nav class="fixed top-0 w-full shadow-sm bg-surface dark:bg-inverse-surface z-50">
+<div class="flex justify-between items-center px-margin-mobile md:px-margin-desktop py-4 max-w-container-max mx-auto">
+<a class="font-headline-md text-headline-md font-bold text-primary dark:text-primary-fixed-dim" href="index.html">EcoRuta</a>
+<div class="hidden md:flex items-center gap-gutter">
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-colors hover:bg-surface-container-low dark:hover:bg-surface-container-highest transition-all duration-200 px-3 py-2 rounded-lg font-label-md text-label-md" href="index.html">Inicio</a>
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-colors hover:bg-surface-container-low dark:hover:bg-surface-container-highest transition-all duration-200 px-3 py-2 rounded-lg font-label-md text-label-md" href="puntos-reciclaje.html">Puntos de reciclaje</a>
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-colors hover:bg-surface-container-low dark:hover:bg-surface-container-highest transition-all duration-200 px-3 py-2 rounded-lg font-label-md text-label-md" href="campanas__1_.html">Campañas</a>
+<a class="text-primary dark:text-primary-fixed-dim border-b-2 border-primary dark:border-primary-fixed-dim pb-1 px-3 py-2 font-label-md text-label-md" href="registrar-punto.html">Registrar un punto</a>
+</div>
+<button class="hidden md:inline-flex bg-primary-container text-on-primary px-6 py-2 rounded-lg font-label-md text-label-md hover:bg-opacity-90 transition-all">Unirse</button>
 <button class="md:hidden text-primary">
 <span class="material-symbols-outlined">menu</span>
 </button>
 </div>
-</header>
+</nav>
 <!-- Main Content -->
 <main class="flex-grow pt-24 pb-section-gap px-margin-mobile md:px-margin-desktop relative">
 <!-- Hero Background Image (Fixed/Absolute for aesthetic) -->

@@ -110,20 +110,19 @@
 </head>
 <body class="bg-background text-on-background antialiased selection:bg-primary-container selection:text-on-primary min-h-screen flex flex-col font-sans">
 <!-- TopNavBar -->
-<nav class="bg-surface dark:bg-surface-container-low docked full-width top-0 shadow-sm z-50">
-<div class="flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop py-4 max-w-container-max mx-auto">
-<div class="font-headline-md text-headline-md font-bold text-primary dark:text-primary-fixed-dim">
-                EcoRuta
-            </div>
-<div class="hidden md:flex gap-gutter items-center">
-<a class="text-on-surface-variant dark:text-surface-variant font-medium hover:text-primary dark:hover:text-primary-fixed-dim transition-colors duration-200" href="#">Inicio</a>
-<a class="text-on-surface-variant dark:text-surface-variant font-medium hover:text-primary dark:hover:text-primary-fixed-dim transition-colors duration-200" href="#">Puntos de reciclaje</a>
-<a class="text-primary dark:text-primary-fixed-dim border-b-2 border-primary font-semibold pb-1 hover:text-primary dark:hover:text-primary-fixed-dim transition-colors duration-200 opacity-80 transition-all duration-200" href="#">Campañas</a>
-<a class="text-on-surface-variant dark:text-surface-variant font-medium hover:text-primary dark:hover:text-primary-fixed-dim transition-colors duration-200" href="#">Registrar un punto</a>
+<nav class="fixed top-0 w-full shadow-sm bg-surface dark:bg-inverse-surface z-50">
+<div class="flex justify-between items-center px-margin-mobile md:px-margin-desktop py-4 max-w-container-max mx-auto">
+<a class="font-headline-md text-headline-md font-bold text-primary dark:text-primary-fixed-dim" href="index.html">EcoRuta</a>
+<div class="hidden md:flex items-center gap-gutter">
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-colors hover:bg-surface-container-low dark:hover:bg-surface-container-highest transition-all duration-200 px-3 py-2 rounded-lg font-label-md text-label-md" href="index.html">Inicio</a>
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-colors hover:bg-surface-container-low dark:hover:bg-surface-container-highest transition-all duration-200 px-3 py-2 rounded-lg font-label-md text-label-md" href="puntos-reciclaje.html">Puntos de reciclaje</a>
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-colors hover:bg-surface-container-low dark:hover:bg-surface-container-highest transition-all duration-200 px-3 py-2 rounded-lg font-label-md text-label-md" href="campanas__1_.html">Campañas</a>
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-colors hover:bg-surface-container-low dark:hover:bg-surface-container-highest transition-all duration-200 px-3 py-2 rounded-lg font-label-md text-label-md" href="registrar-punto.html">Registrar un punto</a>
 </div>
-<button class="bg-primary-container text-on-primary font-label-md text-label-md px-6 py-2 rounded-lg hover:bg-primary transition-colors">
-                Unirse
-            </button>
+<button class="hidden md:inline-flex bg-primary-container text-on-primary px-6 py-2 rounded-lg font-label-md text-label-md hover:bg-opacity-90 transition-all">Unirse</button>
+<button class="md:hidden text-primary">
+<span class="material-symbols-outlined">menu</span>
+</button>
 </div>
 </nav>
 <!-- Main Content Canvas -->
