@@ -524,3 +524,50 @@ footer a:hover {
         grid-template-columns: 1fr;
     }
 }
+
+/* ==========================================================
+   Mapa interactivo (puntos-reciclaje.html)
+   ========================================================== */
+.mapa-seccion {
+    margin-bottom: 32px;
+}
+
+.mapa-barra {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 12px;
+}
+
+.mapa-barra p {
+    margin: 0;
+    color: var(--text-muted);
+}
+
+#mapa {
+    height: 420px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    z-index: 0;
+}
+
+.punto {
+    cursor: pointer;
+}
+
+.punto[hidden] {
+    display: none;
+}
+
+.punto.seleccionado {
+    border-top-color: var(--primary-light);
+    box-shadow: 0 0 0 3px var(--primary-light);
+}
+
+@media (max-width: 600px) {
+    #mapa {
+        height: 320px;
+    }
+}
+
