@@ -281,6 +281,36 @@ label:has(input[type="checkbox"]) input {
     color: var(--white);
 }
 
+/* Mapa interactivo (Leaflet): sin altura definida el mapa NO se ve */
+#mapa {
+    position: relative;
+    z-index: 0;
+    height: 420px;
+    width: 100%;
+    margin-bottom: 32px;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    background-color: var(--secondary);
+    color: var(--primary-dark);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#mapa.leaflet-container {
+    display: block;
+}
+
+#estado {
+    margin: 0 0 16px;
+    font-weight: 600;
+    color: var(--primary-dark);
+}
+
+.punto.seleccionado {
+    outline: 3px solid var(--primary);
+}
+
 .puntos {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -515,6 +545,10 @@ footer a:hover {
    ========================================================== */
 
 @media (max-width: 768px) {
+    #mapa {
+        height: 320px;
+    }
+
     body > header nav {
         flex-direction: column;
         align-items: flex-start;
@@ -524,50 +558,3 @@ footer a:hover {
         grid-template-columns: 1fr;
     }
 }
-
-/* ==========================================================
-   Mapa interactivo (puntos-reciclaje.html)
-   ========================================================== */
-.mapa-seccion {
-    margin-bottom: 32px;
-}
-
-.mapa-barra {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: 12px;
-    margin-bottom: 12px;
-}
-
-.mapa-barra p {
-    margin: 0;
-    color: var(--text-muted);
-}
-
-#mapa {
-    height: 420px;
-    border: 1px solid var(--border);
-    border-radius: 8px;
-    z-index: 0;
-}
-
-.punto {
-    cursor: pointer;
-}
-
-.punto[hidden] {
-    display: none;
-}
-
-.punto.seleccionado {
-    border-top-color: var(--primary-light);
-    box-shadow: 0 0 0 3px var(--primary-light);
-}
-
-@media (max-width: 600px) {
-    #mapa {
-        height: 320px;
-    }
-}
-

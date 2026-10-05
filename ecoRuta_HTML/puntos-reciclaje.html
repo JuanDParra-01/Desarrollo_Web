@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EcoRuta - Puntos de Reciclaje</title>
 
+    <!-- Leaflet: librería del mapa interactivo (su CSS va ANTES que el nuestro) -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
     <link rel="stylesheet" href="diseño.css">
 </head>
@@ -41,146 +42,29 @@
         </section>
 
 
-        <!-- Filtros -->
+        <!-- Filtros: data-categoria debe coincidir con las categorías de datos.js -->
         <section class="filtros">
 
-            <button type="button" data-filtro="todo" class="activo">Todo</button>
-            <button type="button" data-filtro="papel">Papel</button>
-            <button type="button" data-filtro="plastico">Plástico</button>
-            <button type="button" data-filtro="vidrio">Vidrio</button>
-            <button type="button" data-filtro="metal">Metal</button>
-            <button type="button" data-filtro="electronicos">Electrónicos</button>
+            <button data-categoria="Todo" class="activo">Todo</button>
+            <button data-categoria="Papel">Papel</button>
+            <button data-categoria="Plástico">Plástico</button>
+            <button data-categoria="Vidrio">Vidrio</button>
+            <button data-categoria="Metal">Metal</button>
+            <button data-categoria="Electrónicos">Electrónicos</button>
 
         </section>
 
 
-        <!-- Mapa interactivo -->
-        <section class="mapa-seccion">
-
-            <div class="mapa-barra">
-                <button type="button" id="btn-ubicacion">📍 Cerca de mí</button>
-                <p id="mapa-info">Toca un marcador o una tarjeta para ver el punto en el mapa.</p>
-            </div>
-
-            <div id="mapa"></div>
-
-        </section>
+        <!-- Mensaje de estado (cuántos puntos hay o si no hay resultados) -->
+        <p id="estado" role="status"></p>
 
 
-        <!-- Puntos de reciclaje -->
-        <section class="puntos">
+        <!-- Mapa interactivo: puntos.js lo dibuja aquí. Necesita una altura definida en el CSS -->
+        <div id="mapa"></div>
 
 
-            <!-- Punto 1 -->
-            <article class="punto" data-lat="4.5480" data-lng="-75.6750" data-materiales="papel vidrio">
-
-                <h2>Centro Comunitario Norte</h2>
-
-                <p>
-                    Horario: Lunes a Viernes: 08:00 - 18:00
-                </p>
-
-                <p>
-                    Dirección: Av. Siempreviva 742
-                </p>
-
-                <p>
-                    Materiales:
-                </p>
-
-                <ul>
-                    <li>Papel</li>
-                    <li>Cartón</li>
-                    <li>Vidrio</li>
-                </ul>
-
-                <a href="#">Ver detalle</a>
-
-            </article>
-
-
-            <!-- Punto 2 -->
-            <article class="punto" data-lat="4.5339" data-lng="-75.6811" data-materiales="plastico metal">
-
-                <h2>Punto Limpio Plaza Central</h2>
-
-                <p>
-                    Horario: Todos los días: 24hrs
-                </p>
-
-                <p>
-                    Dirección: Plaza de Armas
-                </p>
-
-                <p>
-                    Materiales:
-                </p>
-
-                <ul>
-                    <li>Plástico PET</li>
-                    <li>Latas</li>
-                </ul>
-
-                <a href="#">Ver detalle</a>
-
-            </article>
-
-
-            <!-- Punto 3 -->
-            <article class="punto" data-lat="4.5160" data-lng="-75.6900" data-materiales="electronicos">
-
-                <h2>Ecoparque Sur</h2>
-
-                <p>
-                    Horario: Sábados y Domingos: 09:00 - 14:00
-                </p>
-
-                <p>
-                    Dirección: Calle del Parque 123
-                </p>
-
-                <p>
-                    Materiales:
-                </p>
-
-                <ul>
-                    <li>Electrónicos</li>
-                    <li>Pilas</li>
-                </ul>
-
-                <a href="#">Ver detalle</a>
-
-            </article>
-
-
-            <!-- Punto 4 -->
-            <article class="punto" data-lat="4.5420" data-lng="-75.6600" data-materiales="papel plastico">
-
-                <h2>Estación Verde Universidad</h2>
-
-                <p>
-                    Horario: Lunes a Viernes: 08:00 - 20:00
-                </p>
-
-                <p>
-                    Dirección: Campus Universitario, Edificio B
-                </p>
-
-                <p>
-                    Materiales:
-                </p>
-
-                <ul>
-                    <li>Papel</li>
-                    <li>Cartón</li>
-                    <li>Plástico</li>
-                </ul>
-
-                <a href="#">Ver detalle</a>
-
-            </article>
-
-        </section>
+        <!-- Tarjetas: puntos.js crea una por cada punto de datos.js -->
+        <section class="puntos" id="lista-puntos"></section>
 
     </main>
 
@@ -204,8 +88,14 @@
 
     </footer>
 
-    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     <script src="app.js"></script>
+    <!-- Leaflet define la variable global L; debe cargarse antes que puntos.js -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <!-- puntos.js es un módulo: importa datos.js. Ábrelo con Live Server -->
+    <script type="module" src="puntos.js"></script>
 </body>
 
 </html>
+
+
+
