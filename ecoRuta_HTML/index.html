@@ -20,7 +20,7 @@
                 <a href="puntos-reciclaje.html">Puntos de reciclaje</a>
                 <a href="campanas.html">Campañas</a>
                 <a href="registrar-punto.html">Registrar un punto</a>
-                <a href="unirse.html">Unirse</a>
+                <a href="inscripcion-voluntariado.html">Unirse</a>
             </div>
         </nav>
     </header>
@@ -41,7 +41,7 @@
             </p>
 
             <!-- Buscador -->
-            <form action="#" method="get">
+            <form id="form-busqueda" action="#" method="get">
 
                 <label for="material">¿Qué necesitas reciclar?</label>
                 <input
@@ -51,17 +51,23 @@
                     placeholder="Ej: Plástico, Vidrio, Pilas..."
                 >
 
-                <label for="ubicacion">Tu ubicación:</label>
+                <label for="ubicacion">Zona o dirección (opcional):</label>
                 <input
                     type="text"
                     id="ubicacion"
                     name="ubicacion"
-                    placeholder="Tu ubicación"
+                    placeholder="Ej: Plaza de Armas, Universidad..."
                 >
 
                 <button type="submit">Buscar punto</button>
 
             </form>
+
+            <!-- Resultados del buscador: inicio.js los llena -->
+            <section id="resultados-busqueda" hidden>
+                <p id="mensaje-busqueda" role="status"></p>
+                <div id="lista-busqueda" class="puntos"></div>
+            </section>
 
         </section>
 
@@ -142,40 +148,11 @@
             </p>
 
 
-            <article>
-                <h3>Centro Principal Centro</h3>
+            <!-- Estado de la consulta (cargando / error) -->
+            <p id="destacados-estado" role="status"></p>
 
-                <p>Materiales: Plástico y Vidrio</p>
-
-                <p>Av. Libertador 1234</p>
-
-                <a href="#">Ver detalles</a>
-            </article>
-
-
-            <article>
-                <h3>Punto Verde Plaza Norte</h3>
-
-                <p>Especializado en electrónicos.</p>
-
-                <p>Abierto ahora</p>
-
-                <a href="#">Ver detalles</a>
-            </article>
-
-
-            <article>
-                <h3>Composteros</h3>
-
-                <p>12 ubicaciones</p>
-            </article>
-
-
-            <article>
-                <h3>Textiles</h3>
-
-                <p>5 ubicaciones</p>
-            </article>
+            <!-- inicio.js dibuja aquí los puntos que devuelve la API -->
+            <div id="lista-destacados" class="puntos" aria-busy="false"></div>
 
             <a href="puntos-reciclaje.html">Ver todos los puntos</a>
 
@@ -190,7 +167,7 @@
         <h3>EcoRuta</h3>
 
         <p>
-            © 2024 EcoRuta. Todos los derechos reservados.
+            © 2026 EcoRuta. Todos los derechos reservados.
             Compromiso con el reciclaje comunitario.
         </p>
 
@@ -203,7 +180,8 @@
 
     </footer>
 
-    <script src="app.js"></script>
+    <script type="module" src="app.js"></script>
+    <script type="module" src="inicio.js"></script>
 </body>
 </html>
 

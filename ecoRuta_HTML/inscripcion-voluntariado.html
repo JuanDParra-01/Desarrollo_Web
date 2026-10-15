@@ -22,7 +22,7 @@
                 <a href="puntos-reciclaje.html">Puntos de reciclaje</a>
                 <a href="campanas.html">Campañas</a>
                 <a href="registrar-punto.html">Registrar un punto</a>
-                <a href="unirse.html">Unirse</a>
+                <a href="inscripcion-voluntariado.html">Unirse</a>
             </div>
 
         </nav>
@@ -65,7 +65,7 @@
                     <div>
                         <h3>Fecha y Hora</h3>
                         <p>
-                            Sábado, 15 de Noviembre, 2024<br>
+                            Sábado, 14 de Noviembre, 2026<br>
                             08:00 AM - 12:00 PM
                         </p>
                     </div>
@@ -86,6 +86,15 @@
 
             <!-- Formulario de inscripción -->
             <div class="formulario">
+
+                <!-- Acceso opcional con Google (Supabase Auth): autocompleta nombre y correo -->
+                <section class="cuenta">
+                    <h2>Tu cuenta</h2>
+                    <p id="usuario">Sin sesión iniciada.</p>
+                    <p id="estado-sesion" role="status">Comprobando la configuración...</p>
+                    <button id="entrar" type="button" disabled>Continuar con Google</button>
+                    <button id="salir" type="button" hidden>Cerrar sesión</button>
+                </section>
 
                 <form action="#" method="post">
 
@@ -128,7 +137,7 @@
                         type="tel"
                         id="telefono"
                         name="telefono"
-                        placeholder="+1 234 567 8900"
+                        placeholder="+57 300 123 4567"
                         required
                     >
 
@@ -207,12 +216,15 @@
         </div>
 
         <p>
-            © 2024 EcoRuta. Todos los derechos reservados.
+            © 2026 EcoRuta. Todos los derechos reservados.
         </p>
 
     </footer>
 
-    <script src="app.js"></script>
+    <script type="module" src="app.js"></script>
+    <!-- SDK oficial de Supabase con versión fija (necesita internet) -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.117.2/dist/umd/supabase.js"></script>
+    <script type="module" src="auth.js"></script>
 </body>
 
 </html>

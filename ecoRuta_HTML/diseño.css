@@ -16,10 +16,16 @@
     --text-muted: #414844;
     --white: #ffffff;
     --border: #c1c8c2;
+    --error: #a22121;
 }
 
 * {
     box-sizing: border-box;
+}
+
+/* El atributo hidden siempre oculta, aunque otra regla defina display */
+[hidden] {
+    display: none !important;
 }
 
 body {
@@ -104,13 +110,13 @@ body > header nav > div a.activo {
     font-weight: 700;
 }
 
-body > header nav > div a[href="unirse.html"] {
+body > header nav > div a[href="inscripcion-voluntariado.html"] {
     background-color: var(--primary-light);
     color: var(--primary-dark);
     font-weight: 700;
 }
 
-body > header nav > div a[href="unirse.html"]:hover {
+body > header nav > div a[href="inscripcion-voluntariado.html"]:hover {
     background-color: var(--white);
 }
 
@@ -512,6 +518,69 @@ label:has(input[type="checkbox"]) input {
 
 .registrar-punto .formulario form > div {
     margin-bottom: 4px;
+}
+
+/* ==========================================================
+   Estados de la interfaz (cargando, error) y utilidades
+   ========================================================== */
+
+[role="status"] {
+    font-weight: 600;
+    color: var(--primary-dark);
+}
+
+[role="status"].error {
+    color: var(--error);
+}
+
+button:disabled {
+    opacity: 0.55;
+    cursor: default;
+}
+
+:focus-visible {
+    outline: 3px solid var(--primary);
+    outline-offset: 3px;
+}
+
+/* Barra de búsqueda de puntos-reciclaje.html */
+.herramientas {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    align-items: end;
+    margin-bottom: 20px;
+}
+
+.herramientas > div {
+    flex: 1 1 260px;
+}
+
+.herramientas label {
+    margin-top: 0;
+}
+
+/* Resultados del buscador en index.html */
+#resultados-busqueda {
+    margin-top: 24px;
+}
+
+.puntos-destacados > .puntos {
+    grid-column: 1 / -1;
+}
+
+/* Acceso con Google (inscripcion-voluntariado.html) */
+.cuenta {
+    background-color: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 24px;
+    max-width: 600px;
+    margin-bottom: 24px;
+}
+
+.cuenta h2 {
+    margin-top: 0;
 }
 
 /* ==========================================================

@@ -24,7 +24,7 @@
                 <a href="puntos-reciclaje.html">Puntos de reciclaje</a>
                 <a href="campanas.html">Campañas</a>
                 <a href="registrar-punto.html">Registrar un punto</a>
-                <a href="unirse.html">Unirse</a>
+                <a href="inscripcion-voluntariado.html">Unirse</a>
             </div>
 
         </nav>
@@ -42,7 +42,7 @@
         </section>
 
 
-        <!-- Filtros: data-categoria debe coincidir con las categorías de datos.js -->
+        <!-- Filtros: data-categoria debe coincidir con las categorías de la tabla puntos_reciclaje -->
         <section class="filtros">
 
             <button data-categoria="Todo" class="activo">Todo</button>
@@ -55,7 +55,18 @@
         </section>
 
 
-        <!-- Mensaje de estado (cuántos puntos hay o si no hay resultados) -->
+        <!-- Búsqueda sobre los puntos ya descargados y acciones -->
+        <section class="herramientas">
+            <div>
+                <label for="busqueda">Buscar por nombre, dirección o material</label>
+                <input id="busqueda" type="search" placeholder="Ej: pilas, universidad..." disabled>
+            </div>
+            <button id="btn-ubicacion" type="button" disabled>Cerca de mí</button>
+            <button id="recargar" type="button" disabled>Actualizar puntos</button>
+        </section>
+
+
+        <!-- Mensaje de estado (cargando, cuántos puntos hay, sin resultados o error) -->
         <p id="estado" role="status"></p>
 
 
@@ -63,8 +74,8 @@
         <div id="mapa"></div>
 
 
-        <!-- Tarjetas: puntos.js crea una por cada punto de datos.js -->
-        <section class="puntos" id="lista-puntos"></section>
+        <!-- Tarjetas: puntos.js crea una por cada punto que devuelve la API -->
+        <section class="puntos" id="lista-puntos" aria-busy="false"></section>
 
     </main>
 
@@ -75,7 +86,7 @@
         <h3>EcoRuta</h3>
 
         <p>
-            © 2024 EcoRuta. Todos los derechos reservados.
+            © 2026 EcoRuta. Todos los derechos reservados.
             Compromiso con el reciclaje comunitario.
         </p>
 
@@ -88,10 +99,10 @@
 
     </footer>
 
-    <script src="app.js"></script>
+    <script type="module" src="app.js"></script>
     <!-- Leaflet define la variable global L; debe cargarse antes que puntos.js -->
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-    <!-- puntos.js es un módulo: importa datos.js. Ábrelo con Live Server -->
+    <!-- puntos.js es un módulo: importa api.js y consultas.js. Ábrelo con Live Server -->
     <script type="module" src="puntos.js"></script>
 </body>
 
